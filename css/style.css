@@ -1,0 +1,122 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 15px 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navbar .navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #f39c12;  /* Highlight color on hover */
+}
+
+/* Book List */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  padding: 0 20px;
+}
+
+/* Book Card Styling */
+.book-card {
+  display: inline-block;
+  width: 200px; /* Fix the width of the card */
+  height: 300px; /* Adjust the height to accommodate title and image */
+  margin: 10px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+}
+
+.book-card img {
+  width: 100%;
+  height: 250px; 
+  object-fit:fill;
+  border-radius: 8px;
+}
+
+.book-card-title {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #333; 
+  font-weight: bold;
+}
+
+.book-card-author,
+.book-card-genre {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.book-card-id {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.book-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.book-card a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .navbar .navbar-links {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .book-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-card {
+    width: 90%; 
+    height: auto; 
+    margin-bottom: 20px;
+  }
+}

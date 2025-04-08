@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <script type="module">
+      import { renderNavbar } from "./components/navbar.js";
+      renderNavbar();
+    </script>
+
+    <script type="module" src="./js/main.js"></script>
+  </head>
+  <body>
+    <div id="navbar"></div>
+
+    <h1>Welcome to the Book Store</h1>
+
+    <div id="book-list" class="book-list"></div>
+  </body>
+</html>
