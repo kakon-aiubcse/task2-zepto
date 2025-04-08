@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
+  background-color: #07162a;
   padding: 15px 30px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -17,18 +17,21 @@
 
 .navbar .navbar-links {
   display: flex;
+  font-size: larger;
   gap: 20px;
+  color:#0aebf7;
 }
 
 .navbar a {
+  font-size: large;
   color: #fff;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #f39c12;  /* Highlight color on hover */
+  color: #6000bf; 
 }
 
 /* Book List */
@@ -40,12 +43,11 @@
   margin-top: 20px;
   padding: 0 20px;
 }
-
 /* Book Card Styling */
 .book-card {
   display: inline-block;
-  width: 200px; /* Fix the width of the card */
-  height: 300px; /* Adjust the height to accommodate title and image */
+  width: 250px; 
+  height: 400px; 
   margin: 10px;
   padding: 16px;
   border: 1px solid #ddd;
@@ -53,7 +55,7 @@
   text-align: center;
   background: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .book-card img {
@@ -66,29 +68,39 @@
 .book-card-title {
   font-size: 1.2rem;
   margin: 8px 0;
-  color: #333; 
+  color: #333;
   font-weight: bold;
 }
 
 .book-card-author,
-.book-card-genre {
+.book-card-genre,
+.book-card-id {
   font-size: 0.9rem;
   color: #555;
 }
-
-.book-card-id {
-  font-size: 0.8rem;
-  color: #777;
-}
-
-.book-card a {
+.navbar a, .book-card a {
   text-decoration: none;
   color: inherit;
 }
 
-.book-card a:hover {
+.navbar a:hover, .book-card a:hover {
+  color: #fa6000;
   text-decoration: underline;
 }
+
+/* search-input */
+.search-input {
+  width: 80%;
+  max-width: 400px;
+  padding: 10px 15px;
+  font-size: 16px;
+  margin: 20px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
