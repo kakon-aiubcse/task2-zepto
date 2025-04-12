@@ -19,7 +19,7 @@
   display: flex;
   font-size: larger;
   gap: 20px;
-  color:#0aebf7;
+  color: #f0f0f0;
 }
 
 .navbar a {
@@ -31,7 +31,7 @@
 }
 
 .navbar a:hover {
-  color: #6000bf; 
+  color: #6000bf;
 }
 
 /* Book List */
@@ -46,8 +46,8 @@
 /* Book Card Styling */
 .book-card {
   display: inline-block;
-  width: 250px; 
-  height: 400px; 
+  width: 250px;
+  height: 400px;
   margin: 10px;
   padding: 16px;
   border: 1px solid #ddd;
@@ -60,8 +60,8 @@
 
 .book-card img {
   width: 100%;
-  height: 250px; 
-  object-fit:fill;
+  height: 250px;
+  object-fit: fill;
   border-radius: 8px;
 }
 
@@ -78,18 +78,19 @@
   font-size: 0.9rem;
   color: #555;
 }
-.navbar a, .book-card a {
+.navbar a,
+.book-card a {
   text-decoration: none;
   color: inherit;
 }
 
-.navbar a:hover, .book-card a:hover {
-  color: #fa6000;
+.navbar a:hover,
+.book-card a:hover {
+  color: #5edaff;
   text-decoration: none;
 }
 
 /* search-input */
-
 
 .filter-bar {
   display: flex;
@@ -121,23 +122,53 @@
   right: 10px;
   font-size: 20px;
   cursor: pointer;
-  color: #ccc; 
+  color: #ccc;
   transition: color 0.2s ease;
   z-index: 10;
 }
 
 .wishlist-icon.active {
-  color: red; 
+  color: red;
 }
-
-
 
 .book-card {
   position: relative;
 }
 
+/* pagination */
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin: 20px auto;
+}
 
+.page-btn {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  background-color: #f5f5f5;
+  color: #333;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s, color 0.3s;
+}
+.page-btn:hover {
+  background-color: #ffffff; 
+  color: #12e4f3;
+}
+.page-btn.active {
+  background-color: #12e4f3;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
 
+.page-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
@@ -164,18 +195,25 @@
   }
 
   .book-card {
-    width: 90%; 
-    height: auto; 
+    width: 90%;
+    height: auto;
     margin-bottom: 20px;
   }
   .search-input,
   .genre-dropdown {
     width: auto;
-
   }
 
   .filter-bar {
     row-gap: 5px;
     flex-direction: row;
+  }
+  .pagination {
+    flex-direction: column;
+  }
+
+  .page-btn {
+    width: 100%;
+    font-size: 16px;
   }
 }

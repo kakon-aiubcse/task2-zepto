@@ -14,20 +14,20 @@ export function createBookCard(book) {
 
   const isWishlisted = getWishlist().includes(bookId); 
 
-  // Wishlist icon
+ 
   const wishlistIcon = document.createElement("div");
   wishlistIcon.className = `wishlist-icon ${isWishlisted ? "active" : ""}`;
   wishlistIcon.dataset.id = bookId;
   wishlistIcon.textContent = `${isWishlisted ? "❤️" : "🤍"}`;
 
-  // Handle wishlist toggle
+
   wishlistIcon.addEventListener("click", (e) => {
     e.stopPropagation(); 
     e.preventDefault();  
     toggleWishlist(bookId, wishlistIcon); 
   });
 
-  // Book content (inside link)
+
   const link = document.createElement("a");
   link.href = `book.html?id=${bookId}`;
   link.className = "book-card-link";
@@ -45,7 +45,7 @@ export function createBookCard(book) {
   return card;
 }
 
-// Toggle wishlist function
+
 function toggleWishlist(bookId, iconElement) {
   let wishlist = getWishlist();
 
